@@ -24,3 +24,5 @@ router.post("/registrar/", (request, response) => {
         response.status(400).send(respuesta);        
     })
 })
+
+module.exports = router;

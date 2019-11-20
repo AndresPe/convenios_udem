@@ -1,7 +1,14 @@
 const express = require('express')
+//const cors = require("cors");
 const app = express()
 
+const rutaRegistro = require("./routers/registroRouter");
 
+app.use(express.json());
+//app.use(cors());
+
+
+app.use(rutaRegistro);
 
 //No encontró la ruta solicitada
 app.use("/", (request, response) => {
