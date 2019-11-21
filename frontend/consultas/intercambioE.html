@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- BOOSTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- ICONOS DE FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- MODAL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+        .modal-content {
+            background-color: #c40c1c;
+            color: white;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-decoration: none;
+        }
+    </style>
+
+    <title> Intercambios para Entrantes </title>
+</head>
+
+<body>
+    <div id="navbarToggleExternalContent">
+        <nav class="navbar navbar-light" style="background-color: #c40c1c;">
+            <div> <img src="../assets/img/logo.PNG" alt="all"> </div>
+            <div> <a class="texto" href="intercambioS.html"> Intercambios (Soy Estudiante) </a> </div>
+            <div> <a class="texto" href="becas.html"> Becas </a> </div>
+            <div> <a class="texto" href="#"> Intercambios (No soy Estudiante) </a> </div>
+            <div> <a class="texto" href="../login.html"> Ingresar </a> </div>
+        </nav>
+    </div>
+    <div>
+        <!-- <p class="text-black h4" style="margin-left: 40px;"> Convenios </p> -->
+    </div>
+    <div style="margin: 40px;">
+        <div class="card-deck">
+            <div class="card">
+                <img src="../assets/img/fecha.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-transform: uppercase;"> <b> Guía del Extranjero </b> </h5>
+                    <p class="card-text">
+                        Bienvenido a la Universidad de Medellín.
+                        <br><br>
+                        Este espacio está diseñado con el fin de brindar información necesaria a quienes deseen realizar
+                        intercambio académico en nuestra Universidad.
+                        <br>
+                        Esperamos que su experiencia de intercambio sea altamente gratificante. <br>
+                        <ul>
+                            <li> Periodo 2020-1 (Enero - Junio) - fecha límite de aplicación: 18 de octubre de 2019.
+                            </li>
+                            <li> Periodo 2020-2 (Julio - Diciembre) - fecha límite de aplicación:19 de mayo 2020 </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" data-toggle="modal" data-target="#miModalB"> Proceso de Aplicación </a> <br> <br>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/med.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-transform: uppercase;"> <b> Espacio para Info Sheet o algo así
+                        </b> </h5>
+                    <p class="card-text">
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" data-toggle="modal" data-target="#miModalA"> Requisitos, </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalB"> Beneficios </a> <a>y </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalD"> Documentación necesaria </a> <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/visa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-transform: uppercase;"> <b> información de la VISA </b> </h5>
+                    <p class="card-text">
+                        La solicitud de visa deberá cumplir con los requisitos que establezca el Ministerio de
+                        Relaciones Exteriores mediante resolución. Cualquier inexactitud en los datos contenidos en la
+                        solicitud de la visa será causal de inadmisión, negación o cancelación de la misma. La solicitud
+                        de visa podrá hacerse por medios electrónicos, personalmente o mediante apoderado. Los tipos de
+                        visas que tiene el ministerio de Migración Colombia son: La visa de migrante "M", La visa de
+                        visitante "V" y la visa de residente "R".
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" data-toggle="modal" data-target="#miModalT"> Tèrminos que debes saber, </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalQ"> ¿Quiénes deben registrar la visa? </a> <a>y
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalQ2"> ¿Cuándo se debe registrar una Visa? </a>
+                    <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODALES CON CONTENIDO DE INTERCAMBIO -->
+    <div class="modal fade" id="miModalB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> Proceso de aplicación </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p> Una vez tome la decisión de venir a estudiar a la Universidad de Medellín, debe seguir los
+                        siguientes pasos: </p>
+                    <ul>
+                        <li> Elegir el programa y las asignaturas que cursará en la Universidad de Medellín. </li>
+                        <li> Validar con la Universidad de origen la homologación </li>
+                        <li> Adjuntar los siguientes documentos:
+                            <ol>
+                                <li> Diligenciar el Formulario Intercambio Estudiantes Visitantes </li> <a href="../login.html">Click aquí</a>
+                                <li> Fotocopia de Pasaporte. </li>
+                                <li> Carta de presentación de la institución de origen. </li>
+                                <li> Record Académico </li>
+                                <li> Constancia de Seguro Internacional. </li>
+                                <li> Otros documentos según la convocatoria o el programa a cursar. </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModalT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> A tener en cuenta </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b> La visa </b> es la autorización concedida a un extranjero para el ingreso al territorio
+                        nacional
+                        otorgada por el Ministerio de Relaciones Exteriores. <br>
+
+                        <b> La permanencia </b> es el tiempo durante el cual el extranjero podrá estar en el territorio
+                        nacional. <br>
+
+                        <b> La vigencia </b> será el tiempo comprendido entre la fecha de otorgamiento y la fecha de
+                        finalización
+                        indicada en la etiqueta de la visa. <br> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModalQ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> ¿Quiénes deben registrar la visa? </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Deben registrar la visa, tanto los titulares como los beneficiarios de visa, cuya vigencia sea
+                        superior a tres (3) meses, deberán inscribirse en el Registro de Extranjeros de la Unidad
+                        Administrativa Especial Migración Colombia dentro del plazo de quince (15) días calendario
+                        siguientes, contados a partir de su ingreso al país o de la fecha de expedición de la visa, si
+                        ésta se obtuvo dentro del territorio nacional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModalQ2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> ¿Cuándo se debe registrar una Visa? </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Si la Visa fue expedida fuera de Colombia, los titulares deben registrarla dentro de los quince
+                        (15) días siguientes después de haber ingresado al país. <br>
+                        Si la Visa fue expedida en Colombia, los titulares deben registrarla dentro de los quince (15)
+                        días siguientes, contados a partir de su expedición
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
