@@ -9,10 +9,11 @@ const loginController = require("./controllers/loginController");
 const rutaSolicitud = require("./routers/solicitudRouter")
 const controllerLogin = new loginController();
 
-//Recibir el json por body
+// Recibir json por http methods (body-parser)
 app.use(express.json());
 app.use(cors());
 
+//LoginRouter y rutaRegistro son rutas públicas
 app.use(rutaRegistro);
 app.use(rutaSolicitud);
 app.use("/", loginRouters)
@@ -34,8 +35,9 @@ app.use("/", (request, response, next) => {
     } catch (error) {
         let respuesta = {}
         respuesta.estado = false;
-        respuesta.informacion = "";
+        respuesta.informacion = error;
         respuesta.mensaje = "No autorizado, token invalido";
+        console.log(respuesta);
         response.status(401).send(respuesta)
     }
 });
