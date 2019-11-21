@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
     <!-- BOOSTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -19,6 +20,8 @@
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <!-- AXIOS -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -62,7 +65,6 @@
                                 <option> Externo </option>
                             </select>
                         </div>
-
                         <div class="input-group mb-3">
                             <input type="text" name="usuario" id="usuario" class="form-control input_user" value=""
                                 placeholder="Identificación*">
@@ -72,19 +74,26 @@
                                 placeholder="Contraseña*">
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" name="button" class="btn login_btn">Ingresar</button>
+                            <button type="button" name="button" onclick="" class="btn login_btn">Ingresar</button>
                         </div>
                     </form>
                 </div>
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links text-white">
-                        ¿Eres estudiante externo? <a href="registro.html" class="ml-2 ">Regístrate</a>
+                        ¿No estás registrado? <a href="registro.html" class="ml-2 ">Regístrate</a>
                     </div>
                     <div class="d-flex justify-content-center links">
                         <a href="#" class="">¿Olvidaste tu contraseña?</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container text-center">
+            <i class="fa fa-heart heart"></i>
         </div>
     </div>
 

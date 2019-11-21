@@ -18,6 +18,8 @@
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <!-- AXIOS -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -36,7 +38,18 @@
         }
     </style>
 
-    <title> Ingresar </title>
+    <script type="text/javascript">
+        function AceptaHabbeas() {
+            var mensaje = confirm(
+                "Ley de Protección de Datos Personales: “La autorización suministrada en el presente formulario faculta a La Universidad de Medellín para que dé a sus datos aquí recopilados el tratamiento señalado en la “Política de Privacidad para el Tratamiento de Datos Personales” de La Universidad de Medellín, el cual incluye, entre otras, el envío de información promocional, así como la invitación a eventos. El titular de los datos podrá, en cualquier momento, solicitar que la información sea modificada, actualizada o retirada de las bases de datos de La Universidad de Medellín. "
+            );
+            if (mensaje) {
+                location.href = 'login.html';
+            }
+        }
+    </script>
+
+    <title> Registro </title>
 </head>
 
 <body>
@@ -96,13 +109,22 @@
                             <input type="text" class="form-control" id="tipo_usuario" name="tipo_usuario"
                                 value="Externo" readonly />
                         </div>
-                        <button type="button" class="btn btn-primary" value="Register"> Submit / Completar </button>
                     </div>
+                    <center>
+                        <button type="button" class="btn btn-primary" value="Register" onclick="AceptaHabbeas()">
+                            Submit / Completar </button>
+                    </center>
                 </div>
             </form>
         </div>
     </div>
 
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container text-center">
+            <i class="fa fa-heart heart"></i>
+        </div>
+    </div>
 </body>
 
 </html>
