@@ -7,6 +7,10 @@ class Solicitud {
     }
 
     async crearSolicitud(solicitud) {
+        var date = new Date(); //Obtienes la fecha
+        var fecha_solicitud = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+        console.log(fecha_solicitud);
+
         let query = `INSERT INTO public.info_nacimiento(
             identificacion, fecha, pais, provincia, ciudad)
             VALUES ('${solicitud.identificacion_estudiante}', '${solicitud.fecha}', 
@@ -34,8 +38,8 @@ class Solicitud {
                             '${solicitud.ciudad_actual}');
                             INSERT INTO public.solicitud(
                                 id, identificacion_estudiante, tipo_solicitud, fecha_registro)
-                                VALUES (${solicitud.id}, '${solicitud.identificacion_estudiante}', '${solicitud.tipo_solicitud}',
-                                '${solicitud.fecha_registro}');`;
+                                VALUES (${solicitud.id}, '${solicitud.identificacion_estudiante}', '${solicitud.tipo_intercambio}',
+                                '${fecha_solicitud}');`;
 
         let respuesta = await this.dbController.ejecutarSql(query);
         return respuesta;
