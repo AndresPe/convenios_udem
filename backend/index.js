@@ -1,21 +1,23 @@
 const express = require('express')
-//const cors = require("cors");
-const app = express()
+const cors = require("cors");
+const app = express();
 
 //Recibir el json por body
 app.use(express.json());
 
-//LoginRouter es una ruta pública
+
 const loginRouters = require("./routers/loginRouters");
 const loginController = require("./controllers/loginController");
+const rutaRegistro = require("./routers/registroRouter");
 const controllerLogin = new loginController();
-app.use("/", loginRouters)
+
 
 app.use(express.json());
-//app.use(cors());
+app.use(cors());
 
-
+//LoginRouter y rutaRegistro son rutas públicas
 app.use(rutaRegistro);
+app.use("/", loginRouters);
 
 //No encontró la ruta solicitada
 app.use("/", (request, response, next) => {
@@ -34,8 +36,9 @@ app.use("/", (request, response, next) => {
     } catch (error) {
         let respuesta = {}
         respuesta.estado = false;
-        respuesta.informacion = "";
+        respuesta.informacion = error;
         respuesta.mensaje = "No autorizado, token invalido";
+        console.log(respuesta);
         response.status(401).send(respuesta)
     }
 });
