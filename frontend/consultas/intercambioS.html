@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- BOOSTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- ICONOS DE FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- MODAL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+        .modal-content {
+            background-color: #c40c1c;
+            color: white;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-decoration: none;
+        }
+    </style>
+
+    <title> Intercambios para Salientes </title>
+</head>
+
+<body>
+    <div id="navbarToggleExternalContent">
+        <nav class="navbar navbar-light" style="background-color: #c40c1c;">
+            <div> <img src="../assets/img/logo.PNG" alt="all"> </div>
+            <div> <a class="texto" href="#"> Intercambios (Soy Estudiante) </a> </div>
+            <div> <a class="texto" href="becas.html"> Becas </a> </div>
+            <div> <a class="texto" href="intercambioE.html"> Intercambios (No soy Estudiante) </a> </div>
+            <div> <a class="texto" href="../login.html"> Ingresar </a> </div>
+        </nav>
+    </div>
+    <div style="margin: 40px;">
+        <div class="card-deck">
+            <div class="card">
+                <img src="../assets/img/inter.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> MATRÍCULA DE INTERCAMBIO ACADÉMICO </b> </h5>
+                    <p class="card-text">Los estudiantes de la Universidad de Medellín tienen
+                        la oportunidad de cursar asignaturas en una institución nacional
+                        o extranjera, durante uno o dos periodos académicos,
+                        en instituciones con las cuales se haya suscrito un convenio
+                        específico de intercambio o con cualquier otra universidad
+                        con la que no se haya suscrito un convenio.
+                        Así mismo en los intercambios pueden desarrollar actividades
+                        culturales o sociales con alguna entidad.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a>Conoce los </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalA"> Requisitos, </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalB"> Beneficios </a> <a>y </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalD"> Documentación necesaria </a> <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/img/inter5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> MATRÍCULA DE PRÁCTICA INTERNACIONAL </b> </h5>
+                    <p class="card-text">La práctica internacional es aquella que se realiza
+                        en otro país, puede ser con o sin remuneración. Permite que los
+                        estudiantes adquieran conocimientos sobre otras culturas,
+                        idiomas en algunos casos y amplíen su visión internacional.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a>Conoce los </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalA"> Requisitos, </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalB"> Beneficios </a> <a>y </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalD"> Documentación necesaria </a> <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small> </div>
+            </div>
+            <div class="card">
+                <img src="../assets/img/inter3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> MATRÍCULA DE INTERCAMBIO CULTARAL Y DE IDIOMAS </b></h5>
+                    <p class="card-text">El estudiante que desee realizar un intercambio de idiomas
+                        o intercambio cultural, puede tramitar este tipo matrícula, permitiéndole
+                        continuar vinculado a la institución mientras estudia en el extranjero.
+                        Pagando el 5% del valor usualmente liquidado por concepto de matrícula
+                        semestralmente, la universidad le conservará su plan de estudios
+                        y no tendrá que tramitar reingreso al volver al país.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a>Conoce los </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalA"> Requisitos, </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalB"> Beneficios </a> <a>y </a>
+                    <a href="#" data-toggle="modal" data-target="#miModalD"> Documentación necesaria </a> <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODALES CON CONTENIDO DE INTERCAMBIO ACADEMICO-->
+    <div class="modal fade" id="miModalA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> Requisitos generales para aplicar a un intercambio académico:
+                    </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li> Promedio General de 3.5 </li>
+                        <li> No tener faltas disciplinarias, ni académicas. </li>
+                        <li> Estar matriculado entre el III y X semestre. </li>
+                        <li> No perder asignaturas el semestre inmediatamente anterior al intercambio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModalB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> Beneficios de realizar el proceso de matrícula de
+                        intercambio:</b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li> No pierde la calidad de estudiante. </li>
+                        <li> No realiza trámite de reingreso e inscripción una vez regrese de su movilidad </li>
+                        <li> No se acoge a las modificaciones de pensum. </li>
+                        <li> Se le generan certificados de estudio como estudiante en intercambio.</li>
+                        <li> Peso de una experiencia de intercambio en la hoja de vida.</li>
+                        <li> En caso de intercambio académico se reconocen las asignaturas que cursa en la universidad
+                            de destino, previo visto bueno del Jefe de programa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModalD" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> Documentación para la matrícula de intercambio académico:
+                    </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li> Formulario de registro de aspirantes a intercambio. </li>
+                        <li> Fotocopia del pasaporte. </li>
+                        <li> Carta de aceptación de la universidad, institución o entidad de destino. </li>
+                        <li> Constancia de seguro médico internacional. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

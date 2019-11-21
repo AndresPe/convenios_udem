@@ -1,0 +1,21 @@
+header nav{ /*para que todos los botenes aparezcan al lado derecho en la misma linea*/
+    float: right;
+    line-height: 200px;
+}
+header nav a {
+    display: inline-block;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold; /*tipo de fuente*/
+    /*creamos una transicion a los botones de manera que se vean animados*/
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+header nav a:hover{ /*crear bordo a los botones*/
+    background: #3cd82e;
+    border-radius: 50px;
+}

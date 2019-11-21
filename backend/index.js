@@ -1,4 +1,5 @@
 const express = require('express')
+//const cors = require("cors");
 const app = express()
 
 //Recibir el json por body
@@ -10,6 +11,11 @@ const loginController = require("./controllers/loginController");
 const controllerLogin = new loginController();
 app.use("/", loginRouters)
 
+app.use(express.json());
+//app.use(cors());
+
+
+app.use(rutaRegistro);
 
 //No encontró la ruta solicitada
 app.use("/", (request, response, next) => {

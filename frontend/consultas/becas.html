@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- BOOSTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- ICONOS DE FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- MODAL -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+        .modal-content {
+            background-color: #c40c1c;
+            color: white;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            /* font-family: 'Nunito', sans-serif; */
+        }
+    </style>
+
+    <title> Intercambios para Salientes </title>
+</head>
+
+<body>
+    <div id="navbarToggleExternalContent">
+        <nav class="navbar navbar-light" style="background-color: #c40c1c;">
+            <div> <img src="../assets/img/logo.PNG" alt="all"> </div>
+            <div> <a class="texto" href="intercambioS.html"> Intercambios (Soy Estudiante) </a> </div>
+            <div> <a class="texto" href="#"> Becas </a> </div>
+            <div> <a class="texto" href="intercambioE.html"> Intercambios (No soy Estudiante) </a> </div>
+            <div> <a class="texto" href="../login.html"> Ingresar </a> </div>
+        </nav>
+    </div>
+
+    <div style="margin: 40px;">
+        <div class="card-deck">
+            <div class="card">
+                <img src="../assets/img/bo.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> BECAS SOCIALES 100% </b> </h5>
+                    <p class="card-text">
+                        El programa de becas sociales esta dirigido a aspirantes que tengan ingresos familiares
+                        inferiores a 3.5 SMMLV y que hayan sido admitidos para el primer periodo académico de cada año
+                        en el proceso de admisión establecido por la Universidad. Tendrán prelación para el otorgamiento
+                        de las becas sociales aquellos estudiantes que demuestren, con certificado oficial de la
+                        institución donde cursaron su bachillerato, haber ocupado los dos primeros puestos en el
+                        colegio.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" data-toggle="modal" data-target="#miModalA"> Más información </a> <br> <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/img/b2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> FONDO EPM</b> </h5>
+                    <p class="card-text">
+                        Con este Fondo se busca formar personas integrales, responsables y comprometidas, de acuerdo con
+                        la misión e intereses de la entidad por la educación, la ciencia y la tecnología, en programas
+                        universitarios de los ciclos técnico, tecnológico y profesional en las distintas áreas de la
+                        ingeniería, e igualmente en mercadeo, contaduría pública y administración de empresas.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a
+                        href="https://www.epm.com.co/site/comunidadymedioambiente/comunidad-y-medio-ambiente/comunidad/acceso-a-la-educacion/fondo-epm">
+                        Más información </a> <br> <br>
+                    <small class="text-muted">Last updated 3 mins ago</small> </div>
+            </div>
+            <div class="card">
+                <img src="../assets/img/soc.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b> SAPIENCIA </b></h5>
+                    <p class="card-text">
+                        Es un programa de la Alcaldía de Medellín, administrado por la Agencia de Educación Superior de
+                        Medellín – Sapiencia, que brinda oportunidades para el acceso y la permanencia en la educación
+                        superior a estudiantes de estratos 1, 2, 3 y 4, mediante créditos que se pueden condonar total o
+                        parcialmente si se cumplen con requisitos basados en méritos académicos y prestación de servicio
+                        social. (No es una beca)
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="http://sapiencia.gov.co/fondos-sapiencia/epm-y-universidades/"> Más información </a> <br>
+                    <br>
+
+                    <small class="text-muted">Last updated 3 mins ago</small> </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES CON CONTENIDO DE INTERCAMBIO ACADEMICO-->
+    <div class="modal fade" id="miModalA" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <b style="text-transform: uppercase;"> A tener en cuenta </b>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Para conservar la beca, cada semestre, el beneficiario debe ganar todas las asignaturas del
+                        periodo cursado y demostrar que las condiciones socioeconómicas que lo hicieron acreedor a la
+                        beca, continúan. Es importante tener en cuenta que la solicitud de beca social no garantiza su
+                        otorgamiento puesto que son muchos los aspirantes y limitados los recursos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
