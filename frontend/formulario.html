@@ -38,13 +38,14 @@
     <!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
-
+    
 </head>
 
 <body>
+    
     <div>
         <!--  BURBUJA DE CIERRE DE SESIÓN  -->
-        <a href="login.html" class="made-with-mk">
+        <a class="made-with-mk" onclick="salir()">
             <div class="brand"><i class="fas fa-sign-out-alt"></i></div>
             <div class="made-with"><strong> Cerrar sesión </strong></div>
         </a>
@@ -390,6 +391,7 @@
         </div>
     </div>
 
+    <script src="jwt.js"></script>
 </body>
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
