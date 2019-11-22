@@ -15,10 +15,13 @@
 
     <!-- HOJA DE ESTILOS -->
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/int.css">
+
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <!-- AXIOS -->
@@ -54,12 +57,13 @@
 
 <body>
     <div id="navbarToggleExternalContent">
-        <nav class="navbar navbar-light" style="background-color: #c40c1c;">
+        <nav class="navbar navbar-light" id="topnav" style="background-color: #c40c1c;">
             <div> <img src="assets/img/logo.PNG" alt="all"> </div>
-            <div> <a class="texto" href="consultas/intercambioS.html"> Intercambios (Soy Estudiante) </a> </div>
-            <div> <a class="texto" href="consultas/becas.html"> Becas </a> </div>
-            <div> <a class="texto" href="consultas/intercambioE.html"> Intercambios (No soy Estudiante) </a> </div>
-            <div> <a class="texto" href="login.html"> Ingresar </a> </div>
+            <div> <a id="texto" href="consultas/convenios.html"> Convenios </a> </div>
+            <div> <a id="texto" href="consultas/becas.html"> Becas </a> </div>
+            <div> <a id="texto" href="consultas/intercambioS.html"> Tipos Intercambio </a> </div>
+            <div> <a id="texto" href="consultas/intercambioE.html"> Proceso Intercambio </a> </div>
+            <div> <a id="texto" href="login.html"> Ingresar </a> </div>
         </nav>
     </div>
     <div class="container">
@@ -82,11 +86,11 @@
                         </div>
                         <div class="form-group border border-dark" id="sexo" style="border-radius: 5px;">
                             <div class="maxl">
-                                <label class="" style=" margin: 15px; ">
+                                <label style=" margin: 15px; ">
                                     <input type="radio" name="sexo" value="male" checked>
                                     <span> Male / Masculino</span>
                                 </label>
-                                <label class="">
+                                <label>
                                     <input type="radio" name="sexo" value="female">
                                     <span>Female / Femenino </span>
                                 </label>
