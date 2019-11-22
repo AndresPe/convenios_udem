@@ -18,7 +18,7 @@ class user {
     }
 
     crearToken(informacion){
-        let options = {expiresIn: 300};
+        let options = {expiresIn: 30};
         return jwt.sign(informacion, config.SECRET_KEY, options);
     }
 

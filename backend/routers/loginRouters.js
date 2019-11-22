@@ -13,7 +13,7 @@ router.post("/login/", (request, response) => {
     let body = request.body
     let respuesta = {}
     loginController.login(body).then(usuario => {
-            console.log(usuario);
+            console.log(usuario); 
             let miToken = loginController.crearToken(usuario);
             respuesta.estado = true;
             respuesta.informacion = miToken;
