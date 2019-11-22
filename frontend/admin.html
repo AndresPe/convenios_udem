@@ -60,16 +60,18 @@
 
     <center>
         <div class="table-responsive">
-            <table class="table table-hover" style="border: 3px double red; width: 90%; margin: 30px;">
+            <table class="table table-hover" id="admin" style="border: 3px double red; width: 90%; margin: 30px;">
                 <thead>
                     <tr>
-                        <th>CC </th>
-                        <th>Nombre </th>
-                        <th>Apellido</th>
+                        <th>Identificación </th>
                         <th>Intercambio</th>
-                        <th>Semestre </th>
+                        <th>Periodo </th>
+                        <th>Semestre</th>
+                        <th>Fecha Llegada </th>
+                        <th>Vigente </th>
                         <th>Acción </th>
                     </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td></td>
@@ -77,11 +79,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td> <button type="button" class="btn btn-primary">Ver</button></td>
+                        <td></td>
+                        <td> <button type="button" class="btn btn-danger" onclick="confirmar()"> Cancelar </button></td>
                     </tr>
                 </tbody>
 
-                </thead>
             </table>
         </div>
     </center>
