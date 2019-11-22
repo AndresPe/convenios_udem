@@ -1,5 +1,3 @@
-import Axios from "axios";
-
 function login(){
     let url = "http://localhost:3000/login/";
     let usuario = document.getElementById("usuario").value;

@@ -15,7 +15,6 @@ app.use(cors());
 
 //LoginRouter y rutaRegistro son rutas públicas
 app.use(rutaRegistro);
-app.use(rutaSolicitud);
 app.use("/", loginRouters)
 
 //Middleware
@@ -42,7 +41,7 @@ app.use("/", (request, response, next) => {
     }
 });
 
-// app.use(rutaSolicitud);
+app.use(rutaSolicitud);
 
 //No encontró la ruta solicitada
 app.use("/", (request, response) => {
