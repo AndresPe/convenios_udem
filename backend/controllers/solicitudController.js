@@ -1,9 +1,14 @@
+const jwt = require("jsonwebtoken");
 const DatabaseController = require('./databaseController');
 const config = require('../config/main.config');
 
 class Solicitud {
     constructor() {
         this.dbController = new DatabaseController();
+    }
+
+    validarToken(token){
+        return jwt.verify(token, config.SECRET_KEY);
     }
 
     async crearSolicitud(solicitud) {

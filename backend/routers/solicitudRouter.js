@@ -3,6 +3,27 @@ const router = express.Router();
 const SolicitudController = require("../controllers/solicitudController");
 const solicitudes = new SolicitudController();
 
+
+router.get("/validar-token/", (request, response) => {
+  try {
+    let token = request.headers.token;
+    let respuesta = {}
+    respuesta.estado = true;
+    respuesta.informacion = solicitudes.validarToken(token);
+    respuesta.mensaje = "Token verificado";
+    response.status(200).send(respuesta);
+  } catch (error) {
+    let respuesta = {}
+    respuesta.estado = false;
+    respuesta.informacion = error;
+    respuesta.mensaje = "Token NO verificado";
+    response.status(401).send(respuesta);
+  }
+});
+
+
+
+
 router.post("/solicitud/", (request, response) => {
     let solicitud = request.body;
     solicitudes
