@@ -15,8 +15,6 @@ router.post("/registrar/", (request, response) => {
         response.status(200).send(respuesta);
     })
     .catch(error => {
-        console.log(error);
-
         let respuesta = {};
         respuesta.estado = false;
         respuesta.informacion = error;
