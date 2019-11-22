@@ -1,5 +1,3 @@
-import Axios from "axios";
-
 function registro(){
     let url = "http://localhost:3000/registrar/";
     let id_user = document.getElementById("identificacion");
@@ -13,7 +11,7 @@ function registro(){
     let user_type = 3;
     let body = {id_user, name,last_name, address,
     sexo, email, telephone, password,user_type}
-    Axios.post(url, body).then(response => {
+    axios.post(url, body).then(response => {
         let data = response.data
         if (data.estado == true) {
             let informacion = data.informacion;
