@@ -8,7 +8,7 @@ function login(){
         if (data.estado == true) {
             let informacion = data.informacion;
             sessionStorage.setItem("token", informacion);
-            window.location = "formulario.html";
+            window.location = "estudiante.html";
         }
     });
 }

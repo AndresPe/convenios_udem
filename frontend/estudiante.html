@@ -49,6 +49,19 @@
         }
     </style>
 
+    <script type="text/javascript">
+        function confirmar() {
+            var mensaje = confirm(
+                "¿Seguro que desea cancelar? Esta acción finalizará el proceso de intercambio y no puede ser revertida"
+            );
+            if (mensaje) {
+                location.href = 'estudiante.html';
+            } else {
+                
+            }
+        }
+    </script>
+
     <title> Estudiante </title>
 </head>
 
@@ -89,7 +102,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td> <button type="button" class="btn btn-danger"> Cancelar </button></td>
+                        <td> <button type="button" class="btn btn-danger" onclick="confirmar()"> Cancelar </button></td>
                     </tr>
                 </tbody>
 
