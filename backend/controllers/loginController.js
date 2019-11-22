@@ -7,7 +7,6 @@ class user {
         this.dbController = new databaseController();
     }
 
-
     async login(informacion){
         let usuario = informacion.id_user;
         let password = informacion.password;
@@ -15,13 +14,11 @@ class user {
     
         let query = `SELECT * FROM login WHERE id_user = '${usuario}' and password = md5('${password}')`;
         let respuesta = await this.dbController.ejecutarSql(query);
-    
         return respuesta.rows[0]
     }
 
-
     crearToken(informacion){
-        let options = {expiresIn: 30};
+        let options = {expiresIn: 300};
         return jwt.sign(informacion, config.SECRET_KEY, options);
     }
 

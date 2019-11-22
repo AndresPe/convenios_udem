@@ -1,25 +1,24 @@
 const express = require('express')
 const cors = require("cors");
-const app = express();
+const app = express()
 
-//Recibir el json por body
-app.use(express.json());
-
-
+//LoginRouter es una ruta pública
+const rutaRegistro = require("./routers/registroRouter")
 const loginRouters = require("./routers/loginRouters");
 const loginController = require("./controllers/loginController");
-const rutaRegistro = require("./routers/registroRouter");
+const rutaSolicitud = require("./routers/solicitudRouter")
 const controllerLogin = new loginController();
 
-
+// Recibir json por http methods (body-parser)
 app.use(express.json());
 app.use(cors());
 
 //LoginRouter y rutaRegistro son rutas públicas
 app.use(rutaRegistro);
-app.use("/", loginRouters);
+app.use(rutaSolicitud);
+app.use("/", loginRouters)
 
-//No encontró la ruta solicitada
+//Middleware
 app.use("/", (request, response, next) => {
     try {
         let token = request.headers.token;
@@ -43,6 +42,9 @@ app.use("/", (request, response, next) => {
     }
 });
 
+// app.use(rutaSolicitud);
+
+//No encontró la ruta solicitada
 app.use("/", (request, response) => {
     response.status(404).send("Not found");
 });
