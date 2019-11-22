@@ -3,7 +3,6 @@ const router = express.Router();
 const SolicitudController = require("../controllers/solicitudController");
 const solicitudes = new SolicitudController();
 
-
 router.get("/validar-token/", (request, response) => {
   try {
     let token = request.headers.token;
@@ -20,9 +19,6 @@ router.get("/validar-token/", (request, response) => {
     response.status(401).send(respuesta);
   }
 });
-
-
-
 
 router.post("/solicitud/", (request, response) => {
     let solicitud = request.body;
