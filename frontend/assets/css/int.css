@@ -1,21 +1,24 @@
-header nav{ /*para que todos los botenes aparezcan al lado derecho en la misma linea*/
-    float: right;
-    line-height: 200px;
-}
-header nav a {
-    display: inline-block;
-    color:#fff;
+#topnav {
+    background-color: #c40c1c;
+    overflow: hidden;
+  }
+    #topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    padding: 10px 20px;
-    line-height: normal;
-    font-size: 20px;
-    font-weight: bold; /*tipo de fuente*/
-    /*creamos una transicion a los botones de manera que se vean animados*/
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-header nav a:hover{ /*crear bordo a los botones*/
-    background: #3cd82e;
-    border-radius: 50px;
-}
+    font-size: 17px;
+  }
+    #topnav a:hover {
+    background-color: #ddd;
+    color: #000;
+  }
+    #topnav a.active {
+    background-color: white;
+    color: #c40c1c;
+  }
+    #topnav .icon {
+    display: none;
+  }

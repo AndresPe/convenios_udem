@@ -8,6 +8,7 @@
 
     <!-- BOOSTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- ICONOS DE FONTAWESOME -->
@@ -15,10 +16,12 @@
 
     <!-- HOJA DE ESTILOS -->
     <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/int.css">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
     <!-- AXIOS -->
@@ -47,15 +50,16 @@
 
 <body>
     <div id="navbarToggleExternalContent">
-        <nav class="navbar navbar-light" style="background-color: #c40c1c;">
+        <nav class="navbar navbar-light"  id="topnav" style="background-color: #c40c1c;">
             <div> <img src="../assets/img/logo.PNG" alt="all"> </div>
-            <div> <a class="texto" href="convenios.html"> Convenios </a> </div>
-            <div> <a class="texto" href="#"> Becas </a> </div>
-            <div> <a class="texto" href="intercambioS.html"> Tipos Intercambio </a> </div>
-            <div> <a class="texto" href="intercambioE.html"> Proceso Intercambio </a> </div>
-            <div> <a class="texto" href="../login.html"> Ingresar </a> </div>
+            <div> <a id="texto" href="convenios.html"> Convenios </a> </div>
+            <div> <a id="texto" class="active" href="#"> Becas </a> </div>
+            <div> <a id="texto" href="intercambioS.html"> Tipos Intercambio </a> </div>
+            <div> <a id="texto" href="intercambioE.html"> Proceso Intercambio </a> </div>
+            <div> <a id="texto" href="../login.html"> Ingresar </a> </div>
         </nav>
     </div>
+
 
     <div style="margin: 40px;">
         <div class="card-deck">
